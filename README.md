@@ -10,3 +10,8 @@
 ## Lab Session 2:
 * nh_histogram.csv - contains the data to visualize the histogram
 * nh_data.csv - contains the station data
+
+## Lab Session 3:
+* We will have a look at data on speed cameras around children safety zones in Chicago, IL, USA.
+* Chicago_Speed_Camera_Violations.csv - contains data on the number of speed violations in Chicago. The data has been downloaded from the [Chicago Data Portal](https://data.cityofchicago.org/Transportation/Speed-Camera-Violations/hhkd-xvj4).
+* Read this [FAQ document](https://www.cityofchicago.org/city/en/depts/cdot/supp_info/children_s_safetyzoneporgramautomaticspeedenforcement/automated_speed_enforcementfrequentlyaskedquestions.html) for the most important facts about the data.
