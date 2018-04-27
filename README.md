@@ -6,3 +6,7 @@
   + James Hansen, Makiko Sato, Reto Ruedy: Perception of climate change, Proceedings of the National Academy of Sciences, Sep 2012, 109 (37) E2415-E2423; DOI: 10.1073/pnas.1205276109 [http://www.pnas.org/content/109/37/E2415](http://www.pnas.org/content/109/37/E2415)
   + Supplemental figures [http://www.columbia.edu/~mhs119/PerceptionsAndDice/](http://www.columbia.edu/~mhs119/PerceptionsAndDice/)
 * Data: [https://data.giss.nasa.gov/gistemp/stdata/](https://data.giss.nasa.gov/gistemp/stdata/)
+
+## Lab Session 2:
+* nh_histogram.csv - contains the data to visualize the histogram
+* nh_data.csv - contains the station data
