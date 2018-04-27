@@ -1,0 +1,33 @@
+---
+title: "A Layered Grammar of Graphics"
+output: html_notebook
+---
+
+[Source](https://www.cs.uic.edu/~wilkinson/TheGrammarOfGraphics/minard.txt)
+
+```{r}
+library(ggplot2)
+
+minard <- read.fwf('minard.txt', skip=6, n=48, widths = c(4, 5, 16, 4, 5, 5, 8, 6, 6, 8, 3, 3), col.names=c("lon_city", "lat_city", "city","lon_temp","temp", "days", "date", "lon_troops" , "lat_troops", "strength_troops", "direction", "division"))
+
+```
+
+```{r}
+head(minard)
+```
+
+```{r fig.height=5, fig.width=15}
+options("scipen"=999)
+
+troop_movement <- ggplot(minard, aes(lon_troops, lat_troops)) +
+  geom_path(aes(size = strength_troops, color = direction, group = division), lineend = "round") + 
+  scale_size(range = c(1,20), trans= c("identity"), breaks = c(.01,.1,.5,1,2,3)*10^5, name="Number of Soldiers") + 
+  scale_color_manual(values = c("wheat2", "gray0"), name=c("Mode of the Campaign"), labels=c("Attack", "Retreat")) +
+  geom_text(aes(lon_troops, lat_troops, label = strength_troops), size=4, na.rm=TRUE, check_overlap = TRUE, vjust = -1, nudge_x = 0.05) +
+  geom_text(aes(lon_city, lat_city, label = city), size=4, na.rm=TRUE) +
+  theme_minimal()
+troop_movement
+```
+
+![Minard's Version](https://upload.wikimedia.org/wikipedia/commons/2/29/Minard.png)
+
